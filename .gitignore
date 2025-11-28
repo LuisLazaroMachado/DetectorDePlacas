@@ -1,0 +1,18 @@
+# Ignorar entorno virtual
+.venv/
+
+# Ignorar cache de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar videos y archivos pesados
+*.mp4
+*.avi
+*.mov
+yolov8n.pt
+
+# Ignorar cualquier otra carpeta de datos o modelos pesados
+models/
+sort/
