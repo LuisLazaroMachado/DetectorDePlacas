@@ -1,0 +1,45 @@
+Objetivo del trabajo:
+    -Localización Precisa
+    Lograr que el modelo prediga la ubicación de la placa con una Intersección sobre Unión (IoU) > 70%.
+
+    -Clasificación Confiable
+    Distinguir placas de objetos similares, manteniendo una tasa de falsos positivos < 5%.
+
+    -Comparar Enfoques
+    Evaluar la diferencia entre un modelo YOLOv8 y un método clásico (segmentación morfológica) frente a cambios de iluminación.
+
+    -Validar Funcionalidad
+    Integrar el mejor modelo en un prototipo que procese video en tiempo real desde una cámara.
+
+    -Evaluación Integral
+    Medir el rendimiento con métricas estándar: Precisión, Exhaustividad (Recall) y mAP50.
+
+Nombre de los alumnos participantes:
+    Bravo Lévano, Eduardo Fernando  - u20231E122
+    Chumbiauca Camac, Humberto Aesio - u202110619
+    Lazaro Machado, Luis Isaac - u202323591
+
+Breve Descripcion del dataset:
+    Para el entrenamiento y validación del modelo, se ha utilizado el dataset publico “License Plate Recognition” alojado en Roboflow Universe (proyecto rxg4e).
+    Este conjunto de datos ha sido creado específicamente para tareas de detección de objetos en entornos de tráfico.
+    Fuente: Roboflow University.
+    Composición: El dataset consta de 24242 cantidad de imágenes en total.
+    Distribución: Los datos se han dividido en tres subconjuntos para garantizar un entrenamiento libre de sesgos:
+    Entrenamiento (Train): 21174 imágenes.
+    Validación (Valid):  2048 imágenes.
+    Prueba (Test): 1020 imágenes.
+    Clases: El dataset contiene una única clase etiquetada como: ‘license-plate’.
+    Preprocesamiento: Las imágenes han sido sometidas a un preprocesamiento que incluye redimensionamiento a 640x640 pixeles y autoorientación. Las etiquetas (labels) se encuentran en formato YOLO (txt), conteniendo las coordenadas normalizadas del centro del objeto y sus dimensiones (x, y, w, h).
+
+Conclusiones:
+    -Superioridad del Deep Learning: El modelo YOLOv8 superó ampliamente a las técnicas clásicas, obteniendo un mAP50 de x, demostrando robustez frente a cambios de iluminación y perspectiva que el modelo clásico no pudo manejar.
+    -Viabilidad del Caso de Uso: Se logró responder afirmativamente a las preguntas planteadas; el sistema es capaz de localizar y clasificar placas con una confianza promedio superior al 90%.
+    -El proyecto implementó un sistema ANPR(Automatic Number Plate Recognition) completo utilizando una arquitectura modular basada en detección profunda, tracking y OCR.
+    -Este pipeline puede ejecutarse sobre cualquier video y extenderse fácilmente a tiempo real con una cámara web.
+
+Licencia:
+    Dataset: Licencia CC BY 4.0 - Roboflow Universe
+    Código del proyecto: Licencia MIT
+    Atribución requerida para el dataset:
+    "License Plate Recognition" dataset from Roboflow Universe.
+    link: https://universe.roboflow.com/roboflow-universe-projects/license-plate-recognition-rxg4e/dataset/4 
